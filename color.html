@@ -1,0 +1,147 @@
+    
+               <div class="color-section" id="color" style=
+                "padding-top: 50px;">
+                    <h3>Color Resources:</h3>
+                    <p>Generate a color palette here. </p>
+                    <div id="colorpicker">
+                        <div class="slider-title">
+                            <h4>Helix Start Position</h4>
+                            <div class="sliders" id="slider-start"></div>
+                        </div>
+                        <div class="slider-title">
+                            <h4>Number of Rotations</h4>
+                            <div class="sliders" id="slider-rotations"></div>
+                        </div>
+                        <div class="slider-title">
+                            <h4>Gamma</h4>
+                            <div class="sliders" id="slider-gamma"></div>
+                        </div>
+                        <div class="slider-title">
+                            <h4>Lightness Range</h4>
+                            <div class="sliders" id="slider-lightness"></div>
+                        </div>
+                        <div class="slider-title">
+                            <h4>Number of Colors</h4>
+                            <div class="sliders" id="slider-numcolors"></div>
+                        </div>
+                        <div class="result" id="result"></div>
+                    </div>
+                </div>
+
+    <script>
+
+    var chromaOptions = {
+        start: 200,
+        rotations: .35,
+        gamma: .7,
+        lightnessMin: .3,
+        lightnessMax: .8,
+        colors: 5
+    }
+    var sliderOpts = [{
+            name: "slider-start",
+            range: [0, 359],
+            default: 200,
+            attr: "start"
+        }, {
+            name: "slider-rotations",
+            range: [-2, 2],
+            default: .35,
+            attr: "rotations"
+        }, {
+            name: "slider-gamma",
+            range: [0, 1],
+            default: .7,
+            attr: "gamma"
+        }, {
+            name: "slider-lightness",
+            range: [0, 1],
+            default: [.3, .8],
+            attr: "lightness",
+            type: "range",
+            rangeVals: ["lightnessMin", "lightnessMax"]
+        }, {
+            name: "slider-numcolors",
+            range: [0, 200],
+            default: 5,
+            attr: "colors"
+        },
+    ]
+
+    sliderOpts.forEach(function(d, i) {
+        d.slider = noUiSlider.create(document.getElementById(d.name), {
+            start: d.default,
+            // connect: "lower",
+            orientation: "horizontal",
+            range: {
+                min: d.range[0],
+                max: d.range[1]
+            }
+        }).on("slide", function() {
+            if (d.type == "range") {
+                chromaOptions[d.rangeVals[0]] = parseFloat(document.getElementById(d.name).noUiSlider.get()[0])
+                chromaOptions[d.rangeVals[1]] = parseFloat(document.getElementById(d.name).noUiSlider.get()[1])
+            } else {
+                chromaOptions[d.attr] = parseFloat(document.getElementById(d.name).noUiSlider.get());
+            }
+            updateColors();
+        })
+    })
+
+    var rectElem = document.getElementById("result");
+    var elemBounds = rectElem.getBoundingClientRect();
+    var svg = d3.select("#result").append("svg")
+        .attr("width", elemBounds.width)
+        .attr("height", elemBounds.height)
+    function updateColors() {
+        var colors = chroma.cubehelix()
+            .start(Math.floor(chromaOptions.start))
+            .rotations(Math.floor(chromaOptions.rotations))
+            .gamma(chromaOptions.gamma)
+            .lightness([chromaOptions.lightnessMin, chromaOptions.lightnessMax])
+            .scale('Spectral').domain([1, 0])
+            // .correctLightness()
+            .colors(Math.floor(chromaOptions.colors))
+        try {
+            d3.selectAll("rect").remove();
+        } catch (e) {}
+        var rectWidth = elemBounds.width / colors.length;
+        svg
+            .selectAll(".rect")
+            .data(colors)
+            .enter()
+            .append("rect")
+            .attr("width", rectWidth)
+            .attr("height", elemBounds.height - 8)
+            .attr("x", function(d1, i1) {
+                return i1 * rectWidth
+            })
+            .attr("y", 4)
+            .attr("fill", function(d1, i1) {
+                return d1
+            })
+    }
+    updateColors();
+      // var resultElement = document.getElementById('result'),
+         //  sliders = document.getElementsByClassName('sliders');
+
+      // for (var i = 0; i < sliders.length; i++) {
+
+         //  noUiSlider.create(sliders[i], {
+            //   start: 127,
+            //   connect: "lower",
+            //   orientation: "horizontal",
+            //   range: {
+            //    'min': 0,
+            //    'max': 255
+            //   },
+            //   // format: wNumb({
+            //   //  decimals: 0
+            //   // })
+         //  });
+
+         //  // Bind the color changing function
+         //  // to the slide event.
+         //  sliders[i].noUiSlider.on('slide', setColor);
+      // }
+    </script>

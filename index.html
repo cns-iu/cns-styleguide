@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <title>CNS Style Guide</title><!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"><!-- Custom CSS -->
+    <link href="css/nouislider.min.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script charset="utf-8" src="https://d3js.org/d3.v3.min.js">
+    </script>
+    <script src="js/nouislider.min.js">
+    </script>
+    <script src="js/prism.js">
+    </script><!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#"><img alt="CNS Logo" src="images/CNS-logo.png" width="110px"></a>
+                </li>
+                <li></li>
+                <li>
+                    <a href="#logos">CNS Branding</a>
+                    <ul>
+                        <li>
+                            <a href="#logos">Logos</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#web">Web Visualizations</a>
+                    <ul>
+                        <li>
+                            <a href="#typo">Typography</a>
+                        </li><!--              <li>
+                            <a href="#color">Color</a>
+                        </li> -->
+                        <li>
+                            <a href="#legend">Legend</a>
+                        </li>
+                        <li>
+                            <a href="#examples">Example Visualizations</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#print-vis">Print Visualizations</a>
+                    <ul>
+                        <li>
+                            <a href="#legend">Legend</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <a class="btn btn-default" href="#menu-toggle" id="menu-toggle">Toggle Menu</a>
+                    <h1 id="cns-header">Cyberinfrastructure for Network Science Style Guide</h1>
+                    <div class="">
+                        <!--   <p>Make sure to keep all page content within the <code class="language-css">#page-content-wrapper</code>.</p> -->
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="row" id="logos">
+                        <h3>Logos</h3>
+                        <div class="logo col-lg-6">
+                            <img alt="CNS logo 1" src="images/cns-logo-1.png" width="300px"> <a href="images/cns-logo-1.png"></a>
+                            <p class="logo-indiv"><a href="images/cns-logo-1.ai">.ai</a> | <a href="images/cns-logo-1.png">.png</a></p>
+                        </div>
+                        <div class="logo col-lg-6">
+                            <img alt="CNS logo 2" src="images/cns-logo-2.png" width="300px">
+                            <p class="logo-indiv"><a href="images/cns-logo-2.ai">.ai</a> | <a href="images/cns-logo-2.png">.png</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="logo col-lg-6">
+                            <img alt="CNS logo 3" src="images/cns-logo-3.png" width="150px">
+                            <p class="logo-indiv"><a href="images/cns-logo-3.ai">.ai</a> | <a href="images/cns-logo-3.png">.png</a></p>
+                        </div>
+                        <div class="logo col-lg-6">
+                            <img alt="CNS logo 4" src="images/cns-logo-4.png" width="150px">
+                            <p class="logo-indiv"><a href="images/cns-logo-4.ai">.ai</a>| <a href="images/cns-logo-4.png">.png</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-med-12">
+                            <p>Want a light (white version) logo? <a href="images/cns-light-logos.ai">Download this sheet</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="row" id="typo">
+                        <h3>Typography</h3>
+                        <p class="element">H1</p>
+                        <div class="example">
+                            <p class="header-h1">Ex. This is a headline</p>
+                            <pre><code class="language-css">h1 {
+    font-size: 32px;
+}</code></pre>
+                        </div>
+                        <p class="element">H2</p>
+                        <div class="example">
+                            <p class="header-h2">Ex. This is a subheader</p>
+                            <pre><code class="language-css">h2 {
+    font-size: 25px;
+}</code></pre>
+                        </div>
+                        <p class="element">Body</p>
+                        <div class="example">
+                            <p class="body">Ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis, urna vitae rhoncus scelerisque, ipsum odio fermentum risus, ut blandit ante nisl eu ante. Maecenas nec nunc sollicitudin, semper ante at, gravida urna. Etiam vehicula lorem a erat faucibus posuere.</p>
+                            <pre><code class="language-css">body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+</code></pre>
+                        </div>
+                        <p class="element">Labels</p>
+                        <div class="example">
+                            <p class="label-text">Ex. Filter Label by Grants</p>
+                            <pre><code class="language-css">.labels {
+    font-weight: 600; 
+    font-size: 16px;
+}</code></pre>
+                        </div>
+                        <p class="element">Axis Text</p>
+                        <div class="example">
+                            <p class="axis-text">Ex. 0M | 2M | 4M | 6M | 8M | 10M | 12M</p>
+                            <pre><code class="language-css">.axis-text { 
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: capitalize;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="legend">
+                    <h3>Legend</h3>
+                    <div class="row">
+                        <p class="element">Legend Button</p>
+                        <div class="example">
+                            <div class="legend-container">
+                                <button>Legend</button>
+                            </div>
+                            <pre><code class="language-css">.legend-container button:hover {
+    background-color: #d8d8d8;
+}
+
+.legend-container button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    background: #eaeaea;
+    color: rgba(0,0,0,0.87);
+    border: .5px solid #afafaf;
+    border-radius: 2px;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+</code></pre>
+                        </div>
+                        <p class="element">Legend Label</p>
+                        <div class="example">
+                            <p class="legend-item-label">Nodes</p>
+                            <pre><code class="language-css">.legend-item-label {
+    color: rgba(0,0,0,0.87);
+    font-size: 18px;
+    font-weight: 600;
+}
+</code></pre>
+                        </div>
+                        <p class="element">Legend Sub Label</p>
+                        <div class="example">
+                            <p class="legend-sub-title">Number of Grants</p>
+                            <pre><code class="language-css">.legend-sub-title {
+    font-size: 14px;
+}
+</code></pre>
+                        </div>
+                        <p class="element">Legend Axis Label Numbers</p>
+                        <div class="example">
+                            <p class="legend-label" style="width: 20px">19<br>
+                            <br>
+                            13<br>
+                            <br>
+                            1</p>
+                            <pre><code class="language-css">.legend-label-number {
+    font-size: 13px;
+    text-align: right;
+}
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="row-tester">
+                    <div class="row" id="examples">
+                        <h3>Example Visualizations</h3>
+                        <div class="logo col-lg-6"><img alt="Bar Graph" class="img-responsive" src="images/bar-example-03.jpg" width="600px"></div>
+                        <div class="logo col-lg-6"><img alt="Heat Map" class="img-responsive" src="images/heatmap-example-02.jpg" width="600px"></div>
+                    </div>
+                </div>
+                <div class="section" id="print-vis">
+                    <div class="row" id="">
+                    <h3>Print Visualization</h3>
+                    <h3 id="legend">Legend</h3><img alt="Legend" class="img-responsive" src="images/legend-example-print.jpg" width="1000px"></div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /#page-content-wrapper -->
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="js/jquery.js">
+    </script> <!-- Bootstrap Core JavaScript -->
+     
+    <script src="js/bootstrap.min.js">
+    </script> <!-- Menu Toggle Script -->
+     
+    <script>
+          $("#menu-toggle").click(function(e) {
+              e.preventDefault();
+              $("#wrapper").toggleClass("toggled");
+          });
+    </script> 
+    <script src="js/chroma.min.js">
+    </script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+     <!-- <script src="js/ie10-viewport-bug-workaround.js"></script> -->
+     
+    <script>
+          $(".color-swatch").on("click", function(d, i) {
+              // console.log($(this).find("#hidden").html())
+          })
+    </script>
+</body>
+</html>
