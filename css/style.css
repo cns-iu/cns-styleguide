@@ -204,20 +204,21 @@ hr {
           .color-item {
             display: inline-flex;
             flex-direction: column;
-            margin: 0.85rem;
+            margin: 10px;
           }
           .color-item span[class*="color"] {
-            display: block;
+            display: flex;
             margin-bottom: 0.5rem;
             width: 60px;
             height: 60px;
             border-radius: 60px;
+            justify-content: center;
           }
           .color-label {
-            display: block;
+            display: flex;
             font-size: 16px;
             line-height: 24px;
-            text-align: center;
+            justify-content: center;
           }
           .color1 {
             background-color: #8D1B18;
@@ -265,7 +266,7 @@ hr {
             background-color: #757575;
           }
           .color16 {
-	    border: 1px solid #bdbdbd;
+            border: 1px solid #ffffff;
             background-color: #FFFFFF;
           }
 
