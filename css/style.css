@@ -265,6 +265,7 @@ hr {
             background-color: #757575;
           }
           .color16 {
+	    border: 1px solid #bdbdbd;
             background-color: #FFFFFF;
           }
 
