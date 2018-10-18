@@ -196,7 +196,77 @@ hr {
 	text-align: right;
 }
 
+/* Color swatches */
 
+.color-items {
+          list-style-type: none;
+        }
+          .color-item {
+            display: inline-flex;
+            flex-direction: column;
+            margin: 10px;
+          }
+          .color-item span[class*="color"] {
+            display: block;
+            margin-bottom: 0.5rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+          }
+          .color-label {
+            display: block;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+          }
+          .color1 {
+            background-color: #8D1B18;
+          }
+          .color2 {
+            background-color: #9B180F;
+          }
+          .color3 {
+            background-color: #D30706;
+          }
+          .color4 {
+            background-color: #D36E44;
+          }
+          .color5 {
+            background-color: #D39827;
+          }
+          .color6 {
+            background-color: #D372D2;
+          }
+          .color7 {
+            background-color: #8E1BCE;
+          }
+          .color8 {
+            background-color: #55D4D2;
+          }
+          .color9 {
+            background-color: #0707D2;
+          }
+          .color10 {
+            background-color: #33820D;
+          }
+          .color11 {
+            background-color: #07D46D;
+          }
+          .color12 {
+            background-color: #D3D406;
+          }
+          .color13 {
+            background-color: #D3D46D;
+          }
+          .color14 {
+            background-color: #000007;
+          }
+          .color15 {
+            background-color: #757575;
+          }
+          .color16 {
+            background-color: #FFFFFF;
+          }
 
 /* -- Color Swatches -- */
 
