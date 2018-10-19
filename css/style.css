@@ -199,11 +199,9 @@ hr {
 /* Color swatches */
 
 .color-item {
-            margin-top: 15px;
-            margin-bottom: 15px;
             font-size: 16px;
             line-height: 24px;
-	min-height: 300px;
+	min-height: 250px;
           }
 
           .color-item span {
