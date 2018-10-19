@@ -198,15 +198,19 @@ hr {
 
 /* Color swatches */
 
-.color-items {
-          list-style-type: none;
-        }
-	.color-item {
-		font-size: 16px;
-		line-height: 24px;
-	}
+.color-item {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          .color-item span {
+            display: block;
+          }
+
           .color-img {
-		display: block;
+            display: block;
             margin-bottom: 0.5rem;
             width: 60px;
             height: 60px;
