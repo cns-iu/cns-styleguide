@@ -204,7 +204,7 @@ hr {
           .color-item {
             display: inline-flex;
             flex-direction: column;
-            margin: 1rem;
+            margin: 15px;
           }
           .color-item span[class*="color"] {
             display: flex;
